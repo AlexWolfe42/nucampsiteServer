@@ -62,9 +62,9 @@ router.get('/logout', (req, res, next) => {
     res.clearCookie('session-id');
     res.redirect('/');
   } else {
-    const err = new Error('Your are not logged in!');
+    const err = new Error('You\'re are not logged in!');
     err.status = 403;
-    return next(err);
+    next(err);
   }
 });
 
