@@ -10,8 +10,8 @@ const favoriteSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Campsite'
     }]
+}, {
+    timestamps: true
 });
 
-const Favorite = mongoose.model('Favorite', favoriteSchema);
-
-module.exports = Favorite;
+module.exports = mongoose.model('Favorite', favoriteSchema);
